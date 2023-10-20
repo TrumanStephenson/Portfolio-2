@@ -173,3 +173,18 @@ ul {
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
     transform: relativeY(-0.5rem);
 }
+
+/* Adding vertical parallax scrolling to mix up the view */
+.parallax {
+    /* First image : background*/
+    background-image: url();
+
+    /* Height */
+    min-height: 500px;
+
+    /* Scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
