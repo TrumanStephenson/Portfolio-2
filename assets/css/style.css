@@ -112,30 +112,6 @@ ul {
 }
 
 
-/* Profile Gallery */
-.gallery {
-    border: 1px solid #777;
-    }
-    
-.gallery:hover {
-    border: 1px solid #777;
-    }
-    
-.gallery img {
-    width: 100%;
-    height: auto;
-    }
-    
-.gallery-expanded {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-    }
-    
-.description-gallery {
-    padding: 15px;
-    text-align: center;
-    }
 
 /* Screen adjustment for different aspect ratios */
 @media only screen and (max-width: 700px) {
@@ -177,14 +153,23 @@ ul {
 /* Adding vertical parallax scrolling to mix up the view */
 .parallax {
     /* First image : background*/
-    background-image: url();
+    background-image: url(/assets/images/skyline-1.png);
 
     /* Height */
-    min-height: 500px;
+    min-height: px;
 
     /* Scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.foreground-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19in; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
 }
