@@ -1,6 +1,7 @@
 .body {
     margin: 0;
     padding: 0;
+    background-color: black;
     }
     
  .header1 {
@@ -170,6 +171,6 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 19in; /* Adjust as needed */
+    width: 20in; /* Adjust as needed */
     height: auto; /* Maintain aspect ratio */
 }
