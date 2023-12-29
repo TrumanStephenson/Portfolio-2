@@ -1,9 +1,6 @@
-.body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    }
+
     
+/*    
  .header1 {
     font-family: andale mono, monospace;
     padding-right: 1.2%;
@@ -18,7 +15,9 @@
     margin-bottom: 1px;
     }
 
-/* Navigation Bar including the buttons */
+
+/* Going with the hamburger menu instead - leaving as fall back */  
+/* Navigation Bar including the buttons 
 
 ul {
     list-style-type: none;
@@ -42,7 +41,7 @@ ul {
     margin-bottom: 1px;
     }
 
-/* Buttons */ 
+/* Buttons ------ 
 .button {
     font-family: andale mono, monospace;
     background-color: #006622;
@@ -112,6 +111,49 @@ ul {
     color: white;
 }
 
+*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    }
+
+/* Nav bar 2.0*/
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    display: block;
+}
 
 
 /* Screen adjustment for different aspect ratios */
