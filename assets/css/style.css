@@ -113,6 +113,15 @@ ul {
 
 */
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+
+header {
+    background-color: #262626;
+}
 
 body {
     margin: 0;
@@ -121,40 +130,93 @@ body {
     font-family: 'Arial', sans-serif;
     }
 
-/* Nav bar 2.0*/
+/* Nav bar 2.1*/
 .navbar {
+    min-height: 70px;
     background-color: #333;
-    padding: 15px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.nav-menu {
     display: flex;
+    justify-content: ;
 }
 
-.nav-list li {
-    margin-right: 20px;
+.nav-branding {
+    font-size: 2rem;
 }
 
-.nav-list a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+.nav-link {
+    transition: 0.7s ease;
 }
 
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 6px 0;
+.nav-link:hover {
+    color: dodgerblue;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
     display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
 }
 
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+
+@media(max-with:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translate(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translate(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position:fixed;   
+        left: -100px;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+}
 
 /* Screen adjustment for different aspect ratios */
 @media only screen and (max-width: 700px) {
@@ -182,16 +244,16 @@ body {
     clear: both;
     }
     
-* {
-    box-sizing: border-box;
-    }
-    
+
+/*  I forgot what this was for. 
+    Will temporarily remove this for now and come back to it.
 [data-interactive]:hover,
 [data-interactive]:focus-within {
     background: #111111;
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
     transform: relativeY(-0.5rem);
 }
+        */
 
 /* Adding vertical parallax scrolling to mix up the view */
 .parallax {

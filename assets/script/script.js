@@ -10,12 +10,26 @@
 //     });
 // }
 
+//          Commented out to get this nav bar setup
+// document.addEventListener('DOMContentLoaded', function () {
+//     const mobileMenu = document.getElementById('mobile-menu');
+//     const navList = document.getElementById('navigator');
 
-document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navList = document.getElementById('nav-list');
+//     mobileMenu.addEventListener('click', function () {
+//         navList.classList.toggle('show');
+//     });
+// });
 
-    mobileMenu.addEventListener('click', function () {
-        navList.classList.toggle('show');
-    });
-});
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}))
