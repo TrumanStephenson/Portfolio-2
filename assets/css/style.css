@@ -14,114 +14,27 @@
     height: 60px;
     margin-bottom: 1px;
     }
-
-
-/* Going with the hamburger menu instead - leaving as fall back */  
-/* Navigation Bar including the buttons 
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    }
-    
-.li {
-    display: inline;
-    }
-
-.navigation-bar {
-    background: #006622;
-    padding-right: 1.2%;
-    padding-left: 1.2%;
-    font-size: 30px;
-    z-index: 4;
-    position: relative;
-    width: 98.5%;
-    height: 60px;
-    margin-bottom: 1px;
-    }
-
-/* Buttons ------ 
-.button {
-    font-family: andale mono, monospace;
-    background-color: #006622;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: center;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    }
-    
-.btn1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #006622;
-    }
-    
-.btn1:hover {
-    background-color: #006622;
-    color: white;
-    }
-    
-.btn2 {
-    background-color: white;
-    color: black;
-    border: 2px solid #006622;
-    }
-    
-.btn2:hover {
-    background-color: #006622;
-    color: white;
-    }
-    
-.btn3 {
-    background-color: white;
-    color: black;
-    border: 2px solid #006622;
-    }
-    
-.btn3:hover {
-    background-color: #006622;
-    color: white;
-    }
-    
-.btn4 {
-    background-color: white;
-    color: black;
-    border: 2px solid #006622;
-    }
-    
-.btn4:hover {
-    background-color: #006622;
-    color: white;
-    }
-
-.btn5 {
-    background-color: white;   
-    color: black;
-    border: 2px solid #006622;
-}
-
-.btn5:hover {
-    background-color: #006622;
-    color: white;
-}
-
 */
 
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    }
+    box-sizing: border-box;
+}
 
 header {
     background-color: #262626;
 }
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 
 body {
     margin: 0;
@@ -129,20 +42,22 @@ body {
     background-color: white;
     font-family: 'Arial', sans-serif;
     }
+    
 
 /* Nav bar 2.1*/
 .navbar {
     min-height: 70px;
-    background-color: #333;
-    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 24px;
 }
 
 .nav-menu {
     display: flex;
-    justify-content: ;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
 }
 
 .nav-branding {
@@ -158,7 +73,7 @@ body {
 }
 
 .hamburger {
-    display: none;
+    display: block;
     cursor: pointer;
 }
 
@@ -168,6 +83,9 @@ body {
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
 }
@@ -181,32 +99,33 @@ body {
 
 
 @media(max-with:768px){
-    .hamburger{
+    .hamburger {
         display: block;
     }
 
-    .hamburger.active .bar:nth-child(2){
+    .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger.active .bar:nth-child(1){
+    .hamburger.active .bar:nth-child(1) {
         transform: translate(8px) rotate(45deg);
     }
 
-    .hamburger.active .bar:nth-child(3){
+    .hamburger.active .bar:nth-child(3) {
         transform: translate(-8px) rotate(-45deg);
     }
-
-    .nav-menu{
+    /* Maybe .nav-link or .nav-item? Regardless, 
+    modifying this does not move the 4 descriptors at all*/
+    .nav-menu {
         position:fixed;   
-        left: -100px;
+        left: 100%;
         top: 70px;
         gap: 0;
         flex-direction: column;
         background-color: #262626;
         width: 100%;
         text-align: center;
-        transition: 0.3;
+        transition: 0.3s;
     }
 
     .nav-item {
@@ -218,7 +137,8 @@ body {
     }
 }
 
-/* Screen adjustment for different aspect ratios */
+
+
 @media only screen and (max-width: 700px) {
     .responsive {
     width: 49.99999%;
@@ -237,44 +157,47 @@ body {
     width: 100%;
     }
     }
-
+ 
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
     }
-    
 
-/*  I forgot what this was for. 
-    Will temporarily remove this for now and come back to it.
+  
+
 [data-interactive]:hover,
 [data-interactive]:focus-within {
     background: #111111;
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
     transform: relativeY(-0.5rem);
 }
-        */
+    
 
-/* Adding vertical parallax scrolling to mix up the view */
 .parallax {
-    /* First image : background*/
+     First-image: background;
     background-image: url(/assets/images/skyline-1.png);
 
-    /* Height */
-    min-height: px;
+    Height 
+    min-height: 0px;
 
-    /* Scrolling effect */
+     Scrolling effect 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+        */
 
 .foreground-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20in; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-}
+    width: 20in; 
+    height: auto; 
+} 
+    Noticed while trying to drag the word "Home" 
+    the foreground image was trying to move as well.
+    Now the buttons highlight. 
+        
