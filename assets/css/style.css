@@ -1,21 +1,3 @@
-
-    
-/*    
- .header1 {
-    font-family: andale mono, monospace;
-    padding-right: 1.2%;
-    padding-left: 1.2%;
-    text-align: left;
-    color: float purple;
-    font-size: 30px;
-    z-index: 4;
-    position: relative;
-    width: 98.5%;
-    height: 60px;
-    margin-bottom: 1px;
-    }
-*/
-
 * {
     padding: 0;
     margin: 0;
@@ -35,14 +17,12 @@ a {
     text-decoration: none;
 }
 
-
 body {
     margin: 0;
     padding: 0;
     background-color: white;
     font-family: 'Arial', sans-serif;
     }
-    
 
 /* Nav bar 2.1*/
 .navbar {
@@ -69,7 +49,7 @@ body {
 }
 
 .nav-link:hover {
-    color: dodgerblue;
+    color: darkslategray;
 }
 
 .hamburger {
@@ -98,7 +78,7 @@ body {
 }
 
 
-@media(max-with:768px){
+@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
@@ -117,7 +97,7 @@ body {
     /* Maybe .nav-link or .nav-item? Regardless, 
     modifying this does not move the 4 descriptors at all*/
     .nav-menu {
-        position:fixed;   
+        position: fixed;   
         left: 100%;
         top: 70px;
         gap: 0;
@@ -137,6 +117,19 @@ body {
     }
 }
 
+.back-box {
+    box-shadow: #111111;
+}
+
+.intro-main {
+    content: fixed;
+    padding-top: 5%;
+    padding-bottom: 100;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: large;
+    font-style: oblique;
+}
 
 
 @media only screen and (max-width: 700px) {
@@ -173,31 +166,24 @@ body {
     transform: relativeY(-0.5rem);
 }
     
+.main {
+    margin-bottom: 20px;
+}
 
 .parallax {
-     First-image: background;
     background-image: url(/assets/images/skyline-1.png);
-
-    Height 
-    min-height: 0px;
-
-     Scrolling effect 
+    min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-        */
 
 .foreground-image {
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20in; 
-    height: auto; 
-} 
-    Noticed while trying to drag the word "Home" 
-    the foreground image was trying to move as well.
-    Now the buttons highlight. 
-        
+    width: 101%; 
+    height: auto;
+}
