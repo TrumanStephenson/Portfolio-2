@@ -50,7 +50,7 @@ body {
 }
 
 .nav-menu {
-    display: none;
+    display: fixed;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
