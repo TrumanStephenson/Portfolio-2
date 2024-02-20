@@ -7,16 +7,15 @@
 header {
     background-color: #262626;
     position: fixed;
-/*  top: 0.5%;
-    border-radius: 10px; */
-/* Commenting these out temporarily until I can figure out this hamburger menu.
-    it is still being unruly. But I was able to discover that the margin property
-    in .bar was affecting it's location. */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     box-sizing: border-box;
     z-index: 1001;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 li {
@@ -35,18 +34,50 @@ body {
     font-family: 'Arial', sans-serif;
     }
 
+.title  {
+    color: white;
+    margin: 0;
+    flex: 1;
+}
+
 .first-break {
     top: 0.5%;
 }
 
-/* Nav bar 2.1*/
 .navbar {
+    /* 
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    z-index: 1001;
+    z-index: 1001; */
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-list {
+    /*
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 .nav-menu {
@@ -71,8 +102,17 @@ body {
 }
 
 .hamburger {
-    display: block;
+    display: none;
+    flex-direction: column;
     cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 6px 0;
+    display: block;
 }
 
 .bar {
@@ -88,23 +128,19 @@ body {
     background-color: white;
 }
 
-.nav-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
+
 
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block;
+        /* display: block;
         position: fixed;
         right: 24px;
         top: 24px;
         z-index: 1000;
         cursor: pointer;
-        border: 0px;
+        border: 0px; */
+        display: flex;
     }
 
     .hamburger.active.bar:nth-child(2) {
@@ -138,6 +174,25 @@ body {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #262626;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        text-align: center;
     }
 }
 
